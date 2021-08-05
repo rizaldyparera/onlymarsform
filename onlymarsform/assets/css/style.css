@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url('common.css');
+:root {
+    --first-color: #133462;
+    --second-color: #d8ab56;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    background: var(--first-color);
+}
+
+/* Heading */
+.section-title {
+    position: relative;
+    text-align: center;
+    padding-top: 50px;
+}
+.section-title h1 {
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--second-color);
+}
+.back-btn {
+    width: 100px;
+    height: 30px;
+    justify-content: center;
+    display: flex;
+    margin: 21px auto;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    background-color: #e0e0e0;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    border-radius: 11px;
+}
+#cd-dropdown {
+    padding: 10px;
+    cursor: pointer;
+}
+.cd-select{
+    text-align-last:center;
+    appearance: none;
+    margin: 50px auto;
+}
+select {
+    font-family: "Roboto", sans-serif;
+	cursor: pointer;
+	border-radius: 11px;
+	background-color: #e0e0e0;
+	list-style: none;
+}
+.surveyform {
+    border-radius: 50px;
+    background: #133462;
+    box-shadow: inset 9px 9px 31px #081527,
+                inset -9px -9px 31px #1e539d;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    margin: auto;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+}
+form {
+    color: var(--second-color);
+   
+}
+#name, #email, #fwebsite, #browser, #device, #rate, #message {
+    display: block;
+    width: 100%;
+    height: 35px;
+    padding: 5px 10px;
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+label[for=name], 
+label[for=email],
+label[for=fwebsite],
+label[for=browser],
+label[for=device],
+label[for=rate],
+label[for=message]{
+margin-bottom: 10px;
+display: inline-block;
+}
+#message {
+    min-height: 150px;
+}
+#submit {
+    display: block;
+    padding: 11px;
+    border-radius: 50px;
+    background: #133462;
+    box-shadow:  5px 5px 0px #081527,
+                -5px -5px 0px #1e539d;
+    color: var(--second-color);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 19px;
+    border: 0;
+}
+.rate {
+    position: relative;
+    display: block;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+/*css for alert messages*/
+
+.alert-success{
+    z-index: 9999;
+    background: #D4EDDA;
+    font-size: 18px;
+    padding: 20px 40px;
+    min-width: 420px;
+    position: fixed;
+    right: 0;
+    top: 10px;
+    border-left: 8px solid #3AD66E;
+    border-radius: 4px;
+  }
+  
+  .alert-error{
+    z-index: 9999;
+    background: #FFF3CD;
+    font-size: 18px;
+    padding: 20px 40px;
+    min-width: 420px;
+    position: fixed;
+    right: 0;
+    top: 10px;
+    border-left: 8px solid #FFA502;
+    border-radius: 4px;
+  }
